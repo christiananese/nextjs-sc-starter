@@ -1,7 +1,15 @@
-import Head from "next/head";
-import Start from "../components/Start";
-import styles from "../styles/Home.module.css";
+import Container, {
+  Contain,
+  Section,
+} from "../components/layout/main-container";
 
 export default function Home() {
-  return <Start />;
+  return (
+    <Container>
+      <Section>Hallo ich bin zentriert</Section>
+      <Section fullBleed={true}>
+        <Contain>Hallo ich bin breit und dick</Contain>
+      </Section>
+    </Container>
+  );
 }
